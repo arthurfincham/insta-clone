@@ -1,9 +1,17 @@
  <nav class="navbar px-4 fixed-bottom navbar-expand-sm navbar-light bg-light" id="navbar">
+ <%= link_to root_path do %>
 <i class="bi bi-house-door-fill"></i>
+<% end %>
 <i class="bi bi-search"></i>
 <i class="bi bi-hash"></i>
+<%= link_to pages_links_path do %>
 <i class="bi bi-shield-lock-fill"></i>
+<% end %>
+<% if current_user%>
+<%= link_to user_path(current_user.id) do %>
 <i class="bi bi-person-circle"></i>
+<% end %>
+<% end %>
  </nav>
 
 

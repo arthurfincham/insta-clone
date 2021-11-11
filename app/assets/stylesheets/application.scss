@@ -30,3 +30,10 @@
 
 @import 'partials/postcard';
 @import 'partials/nav';
+
+.pages-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 60vh;
+}

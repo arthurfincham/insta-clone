@@ -1,9 +1,11 @@
 .navbar > .bi {
   font-size: 1.7em;
+  text-transform: none !important;
 }
 
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-top: 1px solid gray;
 }
