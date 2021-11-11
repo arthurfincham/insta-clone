@@ -1,0 +1,67 @@
+ a .post-profile-pic {
+   width: 25px;
+ }
+
+  .bi-chat{
+   margin-bottom: 2px;
+ }
+
+  .list-group{
+   flex-direction: row !important;
+ }
+ 
+ .post-image{
+  width: auto;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  background: 50% 50% no-repeat; 
+ }
+
+
+
+ .post-profile-pic, .post-username {
+   color: black;
+   font-weight: bold;
+   text-decoration: none;
+   white-space: nowrap;
+ }
+
+ .post-buttons {
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+ }
+
+ .post-details{
+   display: flex;
+flex-direction: row;
+justify-content: flex-start;
+ }
+
+ .post-buttons > * {
+   margin-left: 5px;
+   margin-right: 2px;
+ }
+
+
+
+ .post-caption{
+   display: inline;
+   word-wrap: normal;
+ }
+
+ .post-username{
+   display: inline ;
+ }
+
+ .post-card-container{
+   font-size: 12px;
+ }
+
+
+
+ .post-buttons > .bi {
+   font-size: 15px;
+ }
