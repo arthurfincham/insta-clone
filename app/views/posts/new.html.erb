@@ -1,0 +1,19 @@
+<h2>New Post</h2>
+
+<%= form_for @post do |f| %>
+
+  <div class="field">
+    <%= image_tag f.object.image_url if f.object.cached_image_data %>
+    <%= f.hidden_field :image, value: f.object.cached_image_data %>
+    <%= f.file_field :image , :class => 'form-control', :type => 'file' %>
+  </div>
+
+ <div class="field">
+    <%= f.label :caption %><br />
+    <%= f.text_field :caption, autofocus: true, autocomplete: "caption" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Post" %>
+  </div>
+<% end %>
