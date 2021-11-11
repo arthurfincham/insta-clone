@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'shrine'
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'relative_time'
 
 group :development, :test do
   gem 'awesome_print'

@@ -15,6 +15,8 @@
  */
  
  @import 'bootstrap/scss/bootstrap';
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;600;700&display=swap');
 
 
  main{
@@ -22,12 +24,67 @@
    flex-direction: column;
    align-items: center;
    justify-content: center;
+font-family: 'Montserrat', sans-serif;
  }
 
  .post-image{
-   width: 60px;
+  width: auto;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  background: 50% 50% no-repeat; 
  }
 
  a .post-profile-pic {
-   width: 30px;
+   width: 25px;
+ }
+
+ .post-profile-pic, .post-username {
+   color: black;
+   font-weight: bold;
+   text-decoration: none;
+   white-space: nowrap;
+ }
+
+ .post-buttons {
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+ }
+
+ .post-details{
+   display: flex;
+flex-direction: row;
+justify-content: flex-start;
+ }
+
+ .post-buttons > * {
+   margin-left: 5px;
+   margin-right: 2px;
+ }
+
+
+ .list-group{
+   flex-direction: row !important;
+ }
+ .post-caption{
+   display: inline;
+   word-wrap: normal;
+ }
+
+ .post-username{
+   display: inline ;
+ }
+
+ .post-card-container{
+   font-size: 12px;
+ }
+
+ .bi-chat{
+   margin-bottom: 2px;
+ }
+
+ .post-buttons > .bi {
+   font-size: 15px;
  }
