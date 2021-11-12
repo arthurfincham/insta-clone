@@ -19,27 +19,39 @@
   <%= button_to post_likes_path(post), method: :post do %>
     <i class="bi bi-heart"></i>
   <% end %>
-  <i class="bi bi-chat"></i>
+<a class="text-muted mx-2" data-bs-toggle="collapse" href="<%= "#collapseExample#{@int}"%>" role="button" aria-expanded="false" aria-controls="<%= "collapseExample#{@int}"%>">
+    <i class="bi bi-chat"></i>
+    </a>
   </div>
   <div class="post-details mt-1"><span class="mx-2 post-username"><small><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></small></span></div>
    <div class="post-details mt-1"> <span class="mx-2 post-username"><%= id2username(post.user_id) %></span> <p class="post-caption"><%= post.caption %></p></div>
-  <p>
-    <a class="text-muted mx-2" data-bs-toggle="collapse" href="<%= "#collapseExample#{@int}"%>" role="button" aria-expanded="false" aria-controls="<%= "collapseExample#{@int}"%>">
-    Comments
-    </a>
-  </p>
+
   <div class="collapse" id="<%= "collapseExample#{@int}"%>">
-<div class=" card-body">
+<div class="p-1 card-body">
+<small class="list-group p-1 post-comment-row">
+  <a href="<%= user_path(current_user.id)%>" class="post-profile-pic">
+  <%= id2ProfilePic(current_user.id) %>
+  <%= id2username(current_user.id) %>
+  </a>
   <%= form_for [post, post.comments.build] do |f| %>
-  <%= f.text_field :content %>
+  <%= f.text_field :content, class: 'form-control form-control-sm' %>
   <%= f.hidden_field :post_id %>
-  <%= f.submit 'post' %>
+  <%= button_tag :submit do %>
+    <i class="bi bi-chat-fill"></i>
   <% end %>
+  <% end %>
+  </small>
   </div>
-    <div class=" card-body">
-<% post.comments.each do |comment| %>
-<%= comment.content %>
-<% end %>
+    <div class="p-1 card-body">
+    <% post.comments.each do |comment| %>
+      <div class="list-group p-1 post-comment-row">
+      <% if comment.user_id %>
+        <a href="<%= user_path(comment.user_id)%>"><%= id2ProfilePic(comment.user_id) %></a>
+        <small class="post-profile-pic mx-1"><%= id2username(comment.user_id) %></small>
+        <small><%= comment.content %></small>
+        <% end %>
+      </div>
+    <% end %>
     </div>
   </div>
     <p class=" mx-2 mb-1 mt-0 text-muted"><small><%= RelativeTime.in_words(post.created_at)%></small></p>

@@ -68,6 +68,11 @@ justify-content: flex-start;
    word-wrap: normal;
  }
 
+ .comment-content{
+   display: inline;
+   word-wrap: normal;
+ }
+
  .post-username{
    display: inline ;
  }
@@ -88,8 +93,20 @@ button {
    justify-content:space-between
  }
 
+ .post-comment-row{
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+ }
+
  .dropdown-toggle:after{
 display: none;
  }
 
  
+ .form-control-sm{
+   display: inline;
+   width: 70%;
+   margin-left: 5px;
+   font-size: small;
+ }
