@@ -1,8 +1,6 @@
-<h1>tag page</h1>
-
-<ul>
+<div class="tag-list">
+<h3>Filter posts by #tags</h3>
     <% @posts.tag_counts.each do |tag| %>
-     <li class="nav-item">
-       <%= link_to "#{tag.name}", tag_path(tag.name) %><br>
+    <button type="button" class="btn btn-outline-dark m-1"><%= link_to "#{tag.name}", tag_path(tag.name) %></button>
      <% end %>
-  </ul>
+     </div>

@@ -1,14 +1,20 @@
-<div class="profile-container">
-  <div class="d-flex w-100 mx-1">
-    <h3><%= @user.username %></h3>
+<div class="profile-container my-2">
+  <div class="d-flex w-100 mx-3">
+    <div class="profile-image m-2"><%= id2ProfilePic(@user.id) %>
+    </div>
+    <div id="name-and-username">
+    <h4 id="profile-name"><%= @user.name %></h4>
+    <p>@<%=@user.username %></p>
+    </div>
   </div>
-  <div class="w-100" id="pic-and-name">
-    <div class="profile-image"><%= id2ProfilePic(@user.id) %></div>
-    <h4><%= @user.name %></h4>
+  <div class="w-100 my-3" id="post-number">
+  <p class="text-muted"><%= current_user.posts.count %> posts</p>
   </div>
-  <div class="profile-mosaic">
-    <% @posts.each do |post|%>
-    <div class="profile-image" style="background-image: url('<%= post.image_url %>')"></div>
-   <% end %>
+  <div id="profile-mosaic" class="mt-5">
+    <div id="mosaic-container" class="row">
+      <% @posts.each do |post|%>
+        <div class="profile-squares col-4" style="background-image: url('<%= post.image_url %>')"></div>
+      <% end %>
+    </div>
   </div>
 </div>

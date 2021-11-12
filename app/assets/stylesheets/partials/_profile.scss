@@ -1,5 +1,5 @@
 .profile-image img {
-  width: 50px;
+  width: 80px;
 }
 
 .d-flex{
@@ -8,26 +8,59 @@
 
 .profile-container{
   width: 100%;
-  padding-left: 3vw;
   padding-top: 2vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .profile-image{
-  width: 120px;
-  height: 120px;
-  background-size: cover;
-  background-position: center;
-  background: 50% 50% no-repeat; 
+display: flex;
+flex-direction: row;
+align-items: center;
  }
 
- .profile-mosaic{
-   width: 100%;
+ #profile-mosaic{
    display: flex;
    flex-direction: row;
+   align-items: center;
+   justify-content: center;
+ }
+
+ #mosaic-container{
+   align-items: center;
    justify-content: center;
  }
  
 #pic-and-name{
   display: inline-block;
   vertical-align: middle;
+}
+
+.profile-squares{
+  width: 130px;
+  height: 130px;
+  background-size: cover;
+  background-position: center;
+  background: 50% 50% no-repeat;
+  border: 1px solid white;
+}
+#profile-name{
+  font-weight: bold;
+}
+
+#name-and-username{
+  align-items: center;
+  justify-content: center;
+}
+
+#post-number{
+  text-align: center
+}
+
+.tag-list{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
