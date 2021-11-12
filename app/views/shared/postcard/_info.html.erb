@@ -1,0 +1,17 @@
+ 
+<div class="post-buttons mt-2 ml-2">
+  <%= button_to post_likes_path(post), method: :post do %>
+    <% if already_liked(post) %>
+      <i class="bi bi-heart-fill"></i>
+    <% else %>
+      <i class="bi bi-heart"></i>
+    <% end %>
+  <% end %>
+  <a class="text-muted mx-2" data-bs-toggle="collapse" href="<%= "#collapseExample#{@int}"%>" role="button" aria-expanded="false" aria-controls="<%= "collapseExample#{@int}"%>">
+    <i class="bi bi-chat"></i>
+  </a>
+</div>
+<div class="post-details mt-1"><span class="mx-2 post-username"><small><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></small></span></div>
+<div class="post-details mt-1"> <span class="mx-2 post-username"><%= id2username(post.user_id) %></span> 
+  <p class="post-caption"><%= post.caption %></p>
+</div>

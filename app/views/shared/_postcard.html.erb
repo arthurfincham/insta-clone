@@ -1,66 +1,15 @@
 <% @int = 1 %>
 <% @all_posts.each do |post| %>
-<div class="card post-card-container">
-  <div class="list-group p-1 post-top-row">
-  <div> 
-    <a href="<%= user_path(post.user_id)%>" class="post-profile-pic pt-1"><%= id2ProfilePic(post.user_id) %><%= id2username(post.user_id) %></a>
-</div>
-<div class="dropdown">
-  <button class="dropdown-toggle" type="button" id="<%= "dropdownMenuButton#{@int}"%>" data-bs-toggle="dropdown" aria-expanded="false">
-  <i class="bi bi-three-dots"></i>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="<%= "dropdownMenuButton#{@int}"%>">
-     <%= link_to "Delete", post_path(post), method: :delete, data: {confirm: "Are you sure?"}, class: "btn", id: "delete-note"%>
-  </ul>
-</div>
+  <div class="card post-card-container">
+    <%= render 'shared/postcard/header', {:post => post }%>
+    <div class="post-image" style="background-image: url('<%= post.image_url%>')"></div>
+    <%= render 'shared/postcard/info', {:post => post }%>
+    <%= render 'shared/postcard/comments', {:post => post }%>
+    <p class=" mx-2 mb-1 mt-0 text-muted">
+      <small>
+        <%= RelativeTime.in_words(post.created_at)%>
+      </small>
+    </p>
   </div>
-  <div class="post-image" style="background-image: url('<%= post.image_url%>')"></div>
-  <div class="post-buttons mt-2 ml-2">
-  <%= button_to post_likes_path(post), method: :post do %>
-    <% if already_liked(post) %>
-      <i class="bi bi-heart-fill"></i>
-    <% else %>
-      <i class="bi bi-heart"></i>
-    <% end %>
-  <% end %>
-<a class="text-muted mx-2" data-bs-toggle="collapse" href="<%= "#collapseExample#{@int}"%>" role="button" aria-expanded="false" aria-controls="<%= "collapseExample#{@int}"%>">
-    <i class="bi bi-chat"></i>
-    </a>
-  </div>
-  <div class="post-details mt-1"><span class="mx-2 post-username"><small><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></small></span></div>
-   <div class="post-details mt-1"> <span class="mx-2 post-username"><%= id2username(post.user_id) %></span> <p class="post-caption"><%= post.caption %></p></div>
-
-  <div class="collapse" id="<%= "collapseExample#{@int}"%>">
-<div class="p-1 card-body">
-<small class="list-group p-1 post-comment-row">
-  <a href="<%= user_path(current_user.id)%>" class="post-profile-pic">
-  <%= id2ProfilePic(current_user.id) %>
-  <%= id2username(current_user.id) %>
-  </a>
-  <%= form_for [post, post.comments.build] do |f| %>
-  <%= f.hidden_field :post_id %>
-  <%= f.text_field :content, class: 'form-control form-control-sm' %>
-  <%= button_tag :submit do %>
-    <i class="bi bi-chat-fill"></i>
-  <% end %>
-  <% end %>
-  </small>
-  </div>
-    <div class="p-1 card-body">
-    <% post.comments.each do |comment| %>
-      <div class="list-group p-1 post-comment-row">
-      <% if comment.user_id %>
-        <a href="<%= user_path(comment.user_id)%>"><%= id2ProfilePic(comment.user_id) %></a>
-        <small class="post-profile-pic mx-1"><%= id2username(comment.user_id) %></small>
-        <small><%= comment.content %></small>
-        <% end %>
-      </div>
-    <% end %>
-    </div>
-  </div>
-    <p class=" mx-2 mb-1 mt-0 text-muted"><small><%= RelativeTime.in_words(post.created_at)%></small></p>
-</div>
-<% @int += 1 %>
+  <% @int += 1 %>
 <% end %>
-
-

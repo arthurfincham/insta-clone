@@ -1,0 +1,13 @@
+<div class="list-group p-1 post-top-row">
+  <div>
+    <a href="<%= user_path(post.user_id)%>" class="post-profile-pic pt-1"><%= id2ProfilePic(post.user_id) %><%= id2username(post.user_id) %></a>
+  </div>
+  <div class="dropdown">
+    <button class="dropdown-toggle" type="button" id="<%= "dropdownMenuButton#{@int}"%>" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-three-dots"></i>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="<%= "dropdownMenuButton#{@int}"%>">
+      <%= link_to "Delete", post_path(post), method: :delete, data: {confirm: "Are you sure?"}, class: "btn", id: "delete-note"%>
+    </ul>
+  </div>
+</div>

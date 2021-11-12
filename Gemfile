@@ -19,6 +19,7 @@ gem 'relative_time'
 group :development, :test do
   gem 'awesome_print'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'htmlbeautifier'
 end
 
 group :development do
