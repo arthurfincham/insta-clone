@@ -1,6 +1,7 @@
  a .post-profile-pic {
-   width: 25px;
+   width: 30px;
  }
+
 
   .bi-chat{
    margin-bottom: 2px;
@@ -18,7 +19,7 @@
   background: 50% 50% no-repeat; 
  }
  .post-card-container{
-   font-size: 1em;
+   font-size:1.1em;
    width: 18rem;
  }
 
@@ -59,6 +60,7 @@ justify-content: flex-start;
  .post-buttons > * {
    margin-left: 5px;
    margin-right: 2px;
+   font-size: 1.3em;
  }
 
 
@@ -79,7 +81,7 @@ justify-content: flex-start;
 
 
  .post-buttons > .bi {
-   font-size: 1.2em;
+   font-size:1.1em;
  }
 
 button {
@@ -108,7 +110,7 @@ display: none;
    display: inline;
    width: 100%;
    margin-left: 5px;
-   font-size: small;
+   font-size:1.1em;
  }
 
  .new_comment{
