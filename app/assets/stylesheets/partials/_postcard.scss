@@ -81,3 +81,15 @@ button {
    background: none;
    border: none;
  }
+
+ .post-top-row{
+   display: flex;
+   flex-direction: row;
+   justify-content:space-between
+ }
+
+ .dropdown-toggle:after{
+display: none;
+ }
+
+ 
