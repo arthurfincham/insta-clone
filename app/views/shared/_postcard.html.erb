@@ -1,3 +1,4 @@
+<% @int = 1 %>
 <% @all_posts.each do |post| %>
 <div class="card post-card-container">
   <div class="list-group p-1 post-top-row">
@@ -5,10 +6,10 @@
     <a href="<%= user_path(post.user_id)%>" class="post-profile-pic pt-1"><%= id2ProfilePic(post.user_id) %><%= id2username(post.user_id) %></a>
 </div>
 <div class="dropdown">
-  <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="dropdown-toggle" type="button" id="<%= "dropdownMenuButton#{@int}"%>" data-bs-toggle="dropdown" aria-expanded="false">
   <i class="bi bi-three-dots"></i>
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+  <ul class="dropdown-menu" aria-labelledby="<%= "dropdownMenuButton#{@int}"%>">
      <%= link_to "Delete", post_path(post), method: :delete, data: {confirm: "Are you sure?"}, class: "btn", id: "delete-note"%>
   </ul>
 </div>
@@ -22,7 +23,28 @@
   </div>
   <div class="post-details mt-1"><span class="mx-2 post-username"><small><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></small></span></div>
    <div class="post-details mt-1"> <span class="mx-2 post-username"><%= id2username(post.user_id) %></span> <p class="post-caption"><%= post.caption %></p></div>
-
+  <p>
+    <a class="text-muted mx-2" data-bs-toggle="collapse" href="<%= "#collapseExample#{@int}"%>" role="button" aria-expanded="false" aria-controls="<%= "collapseExample#{@int}"%>">
+    Comments
+    </a>
+  </p>
+  <div class="collapse" id="<%= "collapseExample#{@int}"%>">
+<div class=" card-body">
+  <%= form_for [post, post.comments.build] do |f| %>
+  <%= f.text_field :content %>
+  <%= f.hidden_field :post_id %>
+  <%= f.submit 'post' %>
+  <% end %>
+  </div>
+    <div class=" card-body">
+<% post.comments.each do |comment| %>
+<%= comment.content %>
+<% end %>
+    </div>
+  </div>
     <p class=" mx-2 mb-1 mt-0 text-muted"><small><%= RelativeTime.in_words(post.created_at)%></small></p>
 </div>
+<% @int += 1 %>
 <% end %>
+
+
