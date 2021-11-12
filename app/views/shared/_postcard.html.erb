@@ -5,11 +5,14 @@
   </div>
   <div class="post-image" style="background-image: url('<%= post.image_url%>')"></div>
   <div class="post-buttons mt-2 ml-2">
-<i class="bi bi-heart"></i>
+  <%= button_to post_likes_path(post), method: :post do %>
+    <i class="bi bi-heart"></i>
+  <% end %>
   <i class="bi bi-chat"></i>
   </div>
   <div class="post-details mt-1"><span class="mx-2 post-username"><small><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></small></span></div>
    <div class="post-details mt-1"> <span class="mx-2 post-username"><%= id2username(post.user_id) %></span> <p class="post-caption"><%= post.caption %></p></div>
+   
     <p class=" mx-2 mb-1 mt-0 text-muted"><small><%= RelativeTime.in_words(post.created_at)%></small></p>
 </div>
 <% end %>
