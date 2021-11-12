@@ -1,1 +1,14 @@
-<h1>profile page for user</h1>
+<div class="profile-container">
+  <div class="d-flex w-100 mx-1">
+    <h3><%= @user.username %></h3>
+  </div>
+  <div class="w-100" id="pic-and-name">
+    <div class="profile-image"><%= id2ProfilePic(@user.id) %></div>
+    <h4><%= @user.name %></h4>
+  </div>
+  <div class="profile-mosaic">
+    <% @posts.each do |post|%>
+    <div class="profile-image" style="background-image: url('<%= post.image_url %>')"></div>
+   <% end %>
+  </div>
+</div>
