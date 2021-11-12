@@ -1,7 +1,7 @@
 <% @all_posts.each do |post| %>
 <div class="card post-card-container">
   <div class="list-group p-1">
-    <a href="#" class="post-profile-pic pt-1"><%= id2ProfilePic(post.user_id) %><%= id2username(post.user_id) %></a>
+    <a href="<%= user_path(current_user.id)%>" class="post-profile-pic pt-1"><%= id2ProfilePic(post.user_id) %><%= id2username(post.user_id) %></a>
   </div>
   <div class="post-image" style="background-image: url('<%= post.image_url%>')"></div>
   <div class="post-buttons mt-2 ml-2">
@@ -12,7 +12,7 @@
   </div>
   <div class="post-details mt-1"><span class="mx-2 post-username"><small><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></small></span></div>
    <div class="post-details mt-1"> <span class="mx-2 post-username"><%= id2username(post.user_id) %></span> <p class="post-caption"><%= post.caption %></p></div>
-   
+
     <p class=" mx-2 mb-1 mt-0 text-muted"><small><%= RelativeTime.in_words(post.created_at)%></small></p>
 </div>
 <% end %>
