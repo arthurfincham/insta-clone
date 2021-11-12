@@ -12,6 +12,7 @@ def create
   end
 end
 
+
   private
 
   def set_post

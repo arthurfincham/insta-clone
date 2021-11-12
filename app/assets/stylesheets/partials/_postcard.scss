@@ -106,7 +106,13 @@ display: none;
  
  .form-control-sm{
    display: inline;
-   width: 70%;
+   width: 100%;
    margin-left: 5px;
    font-size: small;
+ }
+
+ .new_comment{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
  }
