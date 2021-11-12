@@ -17,7 +17,11 @@
   <div class="post-image" style="background-image: url('<%= post.image_url%>')"></div>
   <div class="post-buttons mt-2 ml-2">
   <%= button_to post_likes_path(post), method: :post do %>
-    <i class="bi bi-heart"></i>
+    <% if already_liked(post) %>
+      <i class="bi bi-heart-fill"></i>
+    <% else %>
+      <i class="bi bi-heart"></i>
+    <% end %>
   <% end %>
 <a class="text-muted mx-2" data-bs-toggle="collapse" href="<%= "#collapseExample#{@int}"%>" role="button" aria-expanded="false" aria-controls="<%= "collapseExample#{@int}"%>">
     <i class="bi bi-chat"></i>
