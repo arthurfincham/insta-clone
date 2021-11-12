@@ -9,6 +9,10 @@ before_action :authenticate_user!
   def create
     @post = current_user.posts.new(post_params)
     @post.user = current_user
+    arr = @post.caption.scan(/#\w+/).flatten
+    arr.each do |tag|
+      @post.tag_list.add(tag)
+    end
     if @post.save
       flash[:notice] = "Post successfully created!"
       redirect_to root_path
@@ -28,7 +32,10 @@ end
   private
 
   def post_params
-    params.require(:post).permit(:caption, :image)
+    params.require(:post).permit(:caption, :image, :tag_list)
   end
 
+
 end
+
+
