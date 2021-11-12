@@ -3,11 +3,11 @@
     <img class="mb-4" src="<%= image_url('instalogo.png')%>" alt="" width="72" height="auto">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
-    <div class="form-floating">
+    <div class="form-floating w-100">
       <%= f.email_field :email, autofocus: true, autocomplete: "email", id: "floatingInput", class: "form-control"%>
       <label for="floatingInput">Email address</label>
     </div>
-    <div class="form-floating">
+    <div class="form-floating w-100">
     <%= f.password_field :password, autocomplete: "current-password", id: "floatingPassword", class: "form-control"%>
     <label for="floatingPassword">Password</label>
     </div>
