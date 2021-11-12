@@ -1,6 +1,9 @@
 <div class="list-group p-2 post-top-row">
   <div>
-    <a href="<%= user_path(post.user_id)%>" class="post-profile-pic pt-1 mx-1"><%= id2ProfilePic(post.user_id) %><%= id2username(post.user_id) %></a>
+    <a href="<%= user_path(post.user_id)%>" class="post-profile-pic pt-1">
+    <%= id2ProfilePic(post.user_id) %>
+    <p class="header-username"><%= id2username(post.user_id) %></p>
+    </a>
   </div>
   <div class="dropdown">
     <button class="dropdown-toggle" type="button" id="<%= "dropdownMenuButton#{@int}"%>" data-bs-toggle="dropdown" aria-expanded="false">

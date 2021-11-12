@@ -1,10 +1,15 @@
  a .post-profile-pic {
    width: 30px;
+   display: inline;
  }
 
+ .header-username{
+   display: inline;
+ }
 
   .bi-chat{
-   margin-bottom: 2px;
+   margin-bottom: 3px;
+  color: black;
  }
 
   .list-group{
@@ -37,7 +42,7 @@
  }
 
 
- .post-profile-pic, .post-username {
+ .comments-profile-pic, .post-profile-pic, .post-username {
    color: black;
    font-weight: bold;
    text-decoration: none;
