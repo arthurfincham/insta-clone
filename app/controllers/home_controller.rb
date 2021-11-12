@@ -1,6 +1,15 @@
 class HomeController < ApplicationController
   def index
-    @all_posts = Post.order('created_at DESC')
+    @all_posts = if params[:tag]
+      Post.tagged_with(params[:tag]).order('created_at DESC')
+    else
+      Post.order('created_at DESC')
+    end
     @comment = Comment.new(post_id: params[:post_id])
   end
+  
+  def tag_page
+    @posts = Post.all
+  end
+
 end

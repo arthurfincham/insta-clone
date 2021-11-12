@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   end
   resources :users
   root to: "home#index"
+  get 'home/tag_page'
+  get "tags/:tag", to: "home#index", as: :tag
 end
