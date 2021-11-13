@@ -37,3 +37,5 @@ yarn-debug.log*
 Guardfile
 Guardfile
 seed_images/
+coverage
+examples.txt

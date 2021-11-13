@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Like, :type => :model do
+RSpec.feature Like, :type => :model do
   before(:all) do
     @user = create(:user)
     @post = create(:post)

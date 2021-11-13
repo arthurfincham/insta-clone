@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Comment, :type => :model do
+RSpec.feature Comment, :type => :model do
   before(:all) do
     @user = create(:user)
     @post = create(:post)

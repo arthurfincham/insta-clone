@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Home controller", :type => :request do
+RSpec.feature "Home controller", :type => :request do
   describe "before authentication" do
     it "it redirects to auth without current user" do
       get "/"

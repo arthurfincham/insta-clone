@@ -21,6 +21,9 @@ group :development, :test do
   gem 'awesome_print'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'htmlbeautifier'
+  gem 'rspec-rails', '~> 4.0'
+  gem 'simplecov'
+  gem 'simplecov-console'
 end
 
 group :development do
@@ -35,12 +38,12 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   gem 'webdrivers'
-  gem 'rspec-rails', '~> 4.0'
   gem 'rspec'
   gem 'factory_bot_rails'
-    gem 'shoulda-matchers', '~> 5.0'
-    gem 'database_cleaner'
-    gem 'rails-controller-testing'
+  gem 'shoulda-matchers', '~> 5.0'
+  gem 'rails-controller-testing'
+  gem 'database_cleaner'
+  gem 'faker'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
