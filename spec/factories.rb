@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :user do
+    id { 1 }
     name { "Joe" }
     username { "joeblogs" }
     email { "joe@gmail.com" }
@@ -7,18 +8,21 @@ FactoryBot.define do
   end
 
   factory :post do
+    id { 1 }
     caption { "A test caption" }
     user_id { 1 }
   end
 
   factory :comment do
+    id { 1 }
     content { "A test comment" }
     user_id { 1 }
     post_id { 1 }
   end
 
   factory :like do
-    post_id { 2 }
-    user_id { 2 }
+    id { 1 }
+    post_id { 1 }
+    user_id { 1 }
   end
 end
