@@ -27,6 +27,8 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   gem 'listen', '~> 3.3'
   gem 'spring'
+  gem 'guard-livereload', '~> 2.5', require: false
+  gem "rack-livereload"
 end
 
 group :test do
