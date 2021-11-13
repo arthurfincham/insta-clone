@@ -16,6 +16,7 @@ gem 'image_processing', '~> 1.12', '>= 1.12.1'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'relative_time'
 gem 'acts-as-taggable-on'
+gem 'gemoji'
 
 group :development, :test do
   gem 'awesome_print'
