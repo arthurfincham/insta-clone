@@ -22,13 +22,12 @@ align-items: center;
  #profile-mosaic{
    display: flex;
    flex-direction: row;
-   align-items: center;
    justify-content: center;
  }
 
  #mosaic-container{
    align-items: center;
-   justify-content: center;
+   justify-content: flex-start;
  }
  
 #pic-and-name{
