@@ -37,6 +37,9 @@ group :test do
   gem 'webdrivers'
   gem 'rspec-rails', '~> 4.0'
   gem 'rspec'
+  gem 'factory_bot_rails'
+    gem 'shoulda-matchers', '~> 5.0'
+    gem 'database_cleaner'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
