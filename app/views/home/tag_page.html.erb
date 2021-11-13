@@ -1,6 +1,8 @@
+<div id="tagcontainer">
+  <h3>Trending</h3>
 <div class="tag-list">
-<h3>Filter posts by #tags</h3>
-    <% @posts.tag_counts.each do |tag| %>
-    <button type="button" class="btn btn-outline-dark m-1"><%= link_to "#{tag.name}", tag_path(tag.name) %></button>
-     <% end %>
-     </div>
+  <% @posts.tag_counts.each do |tag| %>
+    <button type="button" class="m-1"><%= link_to "#{tag.name}", tag_path(tag.name) %></button>
+  <% end %>
+</div>
+</div>

@@ -56,6 +56,15 @@ align-items: center;
 }
 
 .tag-list{
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#tagcontainer{
   height: 90vh;
   display: flex;
   flex-direction: column;
