@@ -41,12 +41,7 @@
  }
 
 
- .comments-profile-pic, .post-profile-pic, .post-username {
-   color: black;
-   font-weight: bold;
-   text-decoration: none;
-   white-space: nowrap;
- }
+
 
  .post-buttons {
 display: flex;
@@ -56,9 +51,16 @@ align-items: center;
  }
 
  .post-details{
-   display: flex;
-flex-direction: row;
-justify-content: flex-start;
+float: left;
+ }
+
+  .post-caption{
+   display: inline;
+   word-wrap: normal;
+ }
+
+  .post-username{
+   display: inline ;
  }
 
  .post-buttons > * {
@@ -67,21 +69,21 @@ justify-content: flex-start;
    font-size: 1.3em;
  }
 
-
-
- .post-caption{
-   display: inline;
-   word-wrap: normal;
+ .comments-profile-pic, .post-profile-pic, .post-username {
+   color: black;
+   font-weight: bold;
+   text-decoration: none;
+   white-space: nowrap;
  }
+
+
 
  .comment-content{
    display: inline;
    word-wrap: normal;
  }
 
- .post-username{
-   display: inline ;
- }
+
 
 
  .post-buttons > .bi {
