@@ -12,4 +12,8 @@ class HomeController < ApplicationController
     @posts = Post.all
   end
 
+  def show
+
+end
+
 end

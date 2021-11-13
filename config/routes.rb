@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :users
   root to: "home#index"
   get 'home/tag_page'
+  get 'home/show'
   get "tags/:tag", to: "home#index", as: :tag
 end

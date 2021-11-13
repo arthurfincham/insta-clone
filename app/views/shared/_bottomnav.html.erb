@@ -30,7 +30,7 @@
 
   <% if current_user %>
 
-    <%= link_to user_path(current_user.id) do %>
+    <%= link_to home_show_path(current_user.id) do %>
       <% if request.path_info.include? 'users' %>
         <i class="bi bi-person-circle"></i>
       <% else %>
