@@ -2,6 +2,8 @@ require "rails_helper"
 
 RSpec.describe Like, :type => :model do
   before(:all) do
+    @user = create(:user)
+    @post = create(:post)
     @like1 = create(:like)
   end
 
