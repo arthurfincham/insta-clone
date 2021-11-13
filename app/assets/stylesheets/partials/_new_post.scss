@@ -1,0 +1,24 @@
+.new-post-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+#new-post-submit{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#new-post-text{
+  min-height: 20vh;
+}
+
+#new-post-image-container{
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
