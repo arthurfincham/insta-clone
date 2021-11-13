@@ -40,6 +40,7 @@ group :test do
   gem 'factory_bot_rails'
     gem 'shoulda-matchers', '~> 5.0'
     gem 'database_cleaner'
+    gem 'rails-controller-testing'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
