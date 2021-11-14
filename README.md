@@ -2,6 +2,8 @@
 
 <img src="app/assets/images/blacklogo.png" width="300px">
 
+[link to live app](https://secret-brushlands-01494.herokuapp.com/)
+
 ![](https://img.shields.io/github/last-commit/arthurfincham/insta-clone)
 ![](https://img.shields.io/github/languages/count/arthurfincham/insta-clone)
 ![](https://img.shields.io/github/languages/code-size/arthurfincham/insta-clone)

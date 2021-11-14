@@ -13,10 +13,10 @@
  *= require_tree .
  *= require_self
  */
- 
+
 $danger: rgb(138, 43, 43);
 
- @import 'bootstrap/scss/bootstrap';
+@import 'bootstrap/scss/bootstrap';
 
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;600;700&display=swap');
@@ -33,14 +33,14 @@ $danger: rgb(138, 43, 43);
 }
 
 
- main{
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: 'SFregular';
   margin-bottom: 7vh;
- }
+}
 
 
 @import 'partials/postcard';
@@ -48,40 +48,39 @@ $danger: rgb(138, 43, 43);
 @import 'partials/profile';
 @import 'partials/new_post';
 
-.pages-links{
+.pages-links {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 60vh;
 }
 
-#mobileSafe{
+#mobileSafe {
   display: none;
 }
 
-#warningMessage{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-background-color: rgb(36, 36, 36);
-color: white;
-height: 100vh;
-width: 100vw;
+#warningMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(36, 36, 36);
+  color: white;
+  height: 80vh;
+  width: 100vw;
 }
 
 @media only screen and (max-width: 460px) {
+  #mobileSafe {
+    display: block;
+  }
 
-#mobileSafe{
-  display: block;
+  #warningMessage {
+    display: none;
+  }
 }
 
-#warningMessage{
-display: none;
-}
-}
-
-.toast{
+.toast {
   z-index: 10;
   position: absolute;
   top: 0;
@@ -89,6 +88,6 @@ display: none;
   background-color: white;
 }
 
-.header-username, .post-profile-pic{
+.header-username, .post-profile-pic {
   font-family: 'SFbold';
 }
