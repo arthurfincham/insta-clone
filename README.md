@@ -39,7 +39,7 @@
  ``` ruby
 % bundle exec rails server
  ```
-
+#### See [important note](#Important)
 
 </div>
 
@@ -98,3 +98,17 @@ _Build Instagram: Simple huh!_
 
 <br>
 
+
+<div align="left">
+
+## Important
+
+If you are viewing the project on a laptop, please open Chrome's DevTools and use a responsive device. This was designed for an iPhone or any other smart device.
+
+On a Mac, press `OPTION` + `COMMAND` + `C`
+
+<br>
+
+<img src="app/assets/images/devtools.gif" width="200px" >
+
+</div>
