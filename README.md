@@ -11,37 +11,7 @@
 </div>
 
 
-<img src="app/assets/images/homeandcomment.gif" width="200px" align="right">
-
 <div align="left">
-
-## Assignment
-
-_Build Instagram: Simple huh!_
-
-* Your challenge is to build Instagram using Rails. 
-* You'll need users who can post pictures.
-* Write comments on pictures and like a picture. 
-* Style it like Instagram's website (or more awesome).
-* Bonus if you can add filters!
-
-## Tags
-
-* Tags built with the [acts-as-taggable](https://github.com/mbleigh/acts-as-taggable-on) gem.
-* Tags are dynamically created from the caption of a post.
-* A helper method extracts any strings beginning with '#', then adds them to the post's _tag_list_.
-
-</div>
-
-<br>
-<br>
-<br>
-<br>
-
-<img src="app/assets/images/tagspreview.gif" width="200px" align="left">
-
-
-<div align="right">
 
 ## Install
 
@@ -75,14 +45,35 @@ _Build Instagram: Simple huh!_
 
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-<img src="app/assets/images/profilepreview.gif" width="200px" align="right">
+<img src="app/assets/images/homeandcomment.gif" width="200px" align="right">
+
+
+
+<div align="left">
+
+## Assignment
+
+_Build Instagram: Simple huh!_
+
+* Your challenge is to build Instagram using Rails. 
+* You'll need users who can post pictures;
+* and users who write comments on pictures and like pictures. 
+* Style it like Instagram's website (or more awesome).
+* Bonus if you can add filters!
+
+## Tags
+
+* Tags built with the [acts-as-taggable](https://github.com/mbleigh/acts-as-taggable-on) gem.
+* Tags are dynamically created from the caption of a post.
+* A helper method extracts any strings beginning with '#', then adds them to the post's _tag_list_.
+
+</div>
+
+<img src="app/assets/images/tagspreview.gif" width="200px" align="right">
+
+<br>
+<br>
 
 <div align="left">
 
@@ -93,12 +84,17 @@ _Build Instagram: Simple huh!_
 
 ## Stack
 
-framework: [Ruby on Rails](https://rubyonrails.org/)
+* framework: [Ruby on Rails](https://rubyonrails.org/)
 
-styling: [Bootstrap](https://getbootstrap.com/)
+* styling: [Bootstrap](https://getbootstrap.com/)
 
-authentication: [Devise](https://github.com/heartcombo/devise)
+* authentication: [Devise](https://github.com/heartcombo/devise)
 
-image uploading: [Shrine.rb](https://shrinerb.com/)
+* image uploading: [Shrine.rb](https://shrinerb.com/)
 
 </div>
+
+<img src="app/assets/images/profilepreview.gif" width="200px" align="right">
+
+<br>
+
