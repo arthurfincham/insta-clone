@@ -38,7 +38,7 @@ $danger: rgb(138, 43, 43);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'SFbold';
+  font-family: 'SFregular';
   margin-bottom: 7vh;
  }
 
@@ -89,3 +89,6 @@ display: none;
   background-color: white;
 }
 
+.header-username, .post-profile-pic{
+  font-family: 'SFbold';
+}
