@@ -13,17 +13,25 @@
   </head>
 
   <body>
+  <div id="warningMessage">
+  <img class="mb-3" src="<%= image_url('whitelogo.png')%>" alt="" width="200" height="auto">
+  It looks like you're on a desktop.
+  <img class="my-3" src="<%= image_url('devtools.gif')%>" alt="" width="300" height="auto">
+  Please open DevTools and use a responsive mobile device. 
+  </div>
+  <div id="mobileSafe">
   <main>
-  <% if notice %>
-      <p class="notice"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-      <p class="alert"><%= alert %></p>
-      <% end %>
+  <%= render 'shared/notices' %>
     <%= yield %>
   </main>
   <% if current_user %>
   <%= render 'shared/bottomnav' %>
   <% end %>
+  </div>
+   <script>
+   $(function() {
+      $('.toast').toast('show');
+   });
+  </script>
   </body>
 </html>
