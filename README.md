@@ -8,7 +8,9 @@
 ![](https://img.shields.io/github/languages/count/arthurfincham/insta-clone)
 ![](https://img.shields.io/github/languages/code-size/arthurfincham/insta-clone)
 
-
+<img src="app/assets/images/homeandcomment.gif" width="200px">
+<img src="app/assets/images/profilepreview.gif" width="200px">
+<img src="app/assets/images/tagspreview.gif" width="200px">
 
 </div>
 
