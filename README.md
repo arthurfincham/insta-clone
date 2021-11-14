@@ -43,15 +43,32 @@ _Build Instagram: Simple huh!_
 
 <div align="right">
 
-## Stack
+## Install
 
-framework: [Ruby on Rails]()
+``` bash
+% git clone https://github.com/arthurfincham/insta-clone
+```
 
-styling: [Bootstrap]()
+## Usage
 
-authentication: [Devise]()
+#### Go to the project directory and install dependencies:
 
-image uploading: [Shrine.rb]()
+``` ruby
+% bundle install
+ ```
+
+#### Create and migrate database:
+
+``` ruby
+% rails db:create
+ ```
+ ``` ruby
+% rails db:migrate
+ ```
+#### Start the Rails server:
+ ``` ruby
+% bundle exec rails server
+ ```
 
 
 </div>
@@ -73,5 +90,15 @@ image uploading: [Shrine.rb]()
 
 * Profile page for user who is logged in.
 * Options for a grid layout or a timeline layout. 
+
+## Stack
+
+framework: [Ruby on Rails](https://rubyonrails.org/)
+
+styling: [Bootstrap](https://getbootstrap.com/)
+
+authentication: [Devise](https://github.com/heartcombo/devise)
+
+image uploading: [Shrine.rb](https://shrinerb.com/)
 
 </div>
