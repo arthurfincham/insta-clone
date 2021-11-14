@@ -1,5 +1,4 @@
 <div class="profile-container my-2">
-  <img class="mb-4" src="<%= image_url('blacklogo.png')%>" alt="" width="300" height="auto">
   <div class="d-flex w-100 mx-3">
     <div class="profile-image m-2"><%= id2ProfilePic(current_user.id) %>
     </div>
@@ -11,8 +10,14 @@
   <div class="w-100 my-3" id="post-number">
   <p class="text-muted"><%= current_user.posts.count %> posts</p>
   </div>
-  <div id="profile-mosaic" class="mt-5">
-    <div id="mosaic-container" class="row">
+  <div class="w-100 d-flex justify-content-evenly">
+    <i class="bi bi-grid-3x3"></i>
+    <%= link_to home_showCards_path(current_user.id) do %>
+    <i class="bi bi-square"></i>
+    <% end %>
+  </div>
+  <div id="profile-mosaic" class="mt-3 d-flex justify-content-center w-100">
+    <div id="mosaic-container">
       <% current_user.posts.all.each do |post|%>
         <div class="profile-squares col-4" style="background-image: url('<%= post.image_url %>')"></div>
       <% end %>

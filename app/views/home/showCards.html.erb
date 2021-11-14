@@ -1,0 +1,21 @@
+<div class="profile-container my-2">
+  <div class="d-flex w-100 mx-3">
+    <div class="profile-image m-2"><%= id2ProfilePic(current_user.id) %>
+    </div>
+    <div id="name-and-username">
+    <h4 id="profile-name"><%= current_user.name %></h4>
+    <p>@<%=current_user.username %></p>
+    </div>
+  </div>
+  <div class="w-100 my-3" id="post-number">
+  <p class="text-muted"><%= current_user.posts.count %> posts</p>
+  </div>
+  <div class="w-100 d-flex justify-content-evenly">
+  <%= link_to home_showGrid_path(current_user.id) do %>
+    <i class="bi bi-grid-3x3"></i>
+    <% end %>
+    <i class="bi bi-square"></i>
+  </div>
+<%= render 'shared/postcard' %>
+</div>
+

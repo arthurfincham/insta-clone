@@ -14,4 +14,8 @@ class HomeController < ApplicationController
 
   def show
   end
+
+  def showCards
+    @all_posts = current_user.posts.order("created_at DESC")
+  end
 end
