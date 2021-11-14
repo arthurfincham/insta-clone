@@ -25,9 +25,14 @@ _Build Instagram: Simple huh!_
 * Style it like Instagram's website (or more awesome).
 * Bonus if you can add filters!
 
+## Tags
+
+* Tags built with the [acts-as-taggable](https://github.com/mbleigh/acts-as-taggable-on) gem.
+* Tags are dynamically created from the caption of a post.
+* A helper method extracts any strings beginning with '#', then adds them to the post's _tag_list_.
+
 </div>
 
-<br>
 <br>
 <br>
 <br>
@@ -35,13 +40,19 @@ _Build Instagram: Simple huh!_
 
 <img src="app/assets/images/tagspreview.gif" width="200px" align="left">
 
+
 <div align="right">
 
-## Tags
+## Stack
 
-* Tags built with the [acts-as-taggable](https://github.com/mbleigh/acts-as-taggable-on) gem.
-* Tags are dynamically created from the caption of a post.
-* A helper method extracts any strings beginning with '#', then adds them to the post's _tag_list_.
+framework: [Ruby on Rails]()
+
+styling: [Bootstrap]()
+
+authentication: [Devise]()
+
+image uploading: [Shrine.rb]()
+
 
 </div>
 
