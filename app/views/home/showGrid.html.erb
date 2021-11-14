@@ -10,7 +10,7 @@
   <div class="w-100 my-3" id="post-number">
   <p class="text-muted"><%= current_user.posts.count %> posts</p>
   </div>
-  <div class="w-100 d-flex justify-content-evenly">
+  <div class="w-100 d-flex justify-content-evenly profile-buttons">
     <i class="bi bi-grid-3x3"></i>
     <%= link_to home_showCards_path(current_user.id) do %>
     <i class="bi bi-square"></i>
