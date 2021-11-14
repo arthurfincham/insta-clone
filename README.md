@@ -11,9 +11,6 @@
 </div>
 
 
-
-<h2>Preview</h2>
-
 <img src="app/assets/images/homeandcomment.gif" width="200px" align="right">
 
 <div align="left">
@@ -30,8 +27,11 @@ _Build Instagram: Simple huh!_
 
 </div>
 
-&nbsp;
-&nbsp;
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <img src="app/assets/images/tagspreview.gif" width="200px" align="left">
 
@@ -45,6 +45,14 @@ _Build Instagram: Simple huh!_
 
 </div>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <img src="app/assets/images/profilepreview.gif" width="200px" align="right">
 
