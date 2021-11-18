@@ -15,7 +15,8 @@ gem 'image_processing', '~> 1.12', '>= 1.12.1'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'relative_time'
 gem 'acts-as-taggable-on'
-gem 'aws-sdk-s3', require: false
+gem 'aws-sdk-s3'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -29,7 +30,6 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   gem 'listen', '~> 3.3'
   gem 'spring'
-  gem 'guard-livereload', '~> 2.5', require: false
   gem "rack-livereload"
 end
 
