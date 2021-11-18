@@ -32,7 +32,7 @@ end
   private
 
   def post_params
-    params.require(:post).permit(:caption, :image, :tag_list)
+    params.require(:post).permit(:caption, :photo, :tag_list)
   end
 
 

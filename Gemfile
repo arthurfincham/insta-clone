@@ -11,12 +11,11 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'devise'
-gem 'shrine'
 gem 'image_processing', '~> 1.12', '>= 1.12.1'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'relative_time'
 gem 'acts-as-taggable-on'
-
+gem 'aws-sdk-s3', require: false
 group :development, :test do
   gem 'awesome_print'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
