@@ -1,7 +1,7 @@
 <div class="list-group p-2 post-top-row">
   <div>
     <a href="<%= user_path(post.user_id)%>" class="post-profile-pic pt-1">
-    <%= id2ProfilePic(post.user_id) %>
+    <%= id2ProfilePic(post.user_id) if User.find(post.user_id).photo?%>
     <p class="header-username"><%= id2username(post.user_id) %></p>
     </a>
   </div>

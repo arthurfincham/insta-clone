@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  include ImageUploader::Attachment(:image)
+  mount_uploader :photo, PhotoUploader
   acts_as_taggable_on :tags
   belongs_to :user, optional: true
   validates :user_id, presence: true

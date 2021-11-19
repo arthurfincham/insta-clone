@@ -39,3 +39,6 @@ Guardfile
 seed_images/
 coverage
 examples.txt
+
+# Ignore application configuration
+/config/application.yml
