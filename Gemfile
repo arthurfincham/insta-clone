@@ -15,7 +15,9 @@ gem 'image_processing', '~> 1.12', '>= 1.12.1'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'relative_time'
 gem 'acts-as-taggable-on'
-gem 'aws-sdk-s3'
+gem 'carrierwave', '~> 2.0'
+gem 'figaro'
+gem "fog-aws"
 
 group :development, :test do
   gem 'awesome_print'

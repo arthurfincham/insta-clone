@@ -40,3 +40,6 @@ seed_images/
 coverage
 examples.txt
 config/master.key
+
+# Ignore application configuration
+/config/application.yml
