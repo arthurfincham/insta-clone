@@ -9,7 +9,7 @@ module ApplicationHelper
 end
 
   def id2ProfilePic(id)
-    image_tag(User.find(id).image_url, class: "post-profile-pic rounded-circle mx-1")
+    image_tag(User.find(id).photo_url, class: "post-profile-pic rounded-circle mx-1")
   end
 
   def already_liked(post)

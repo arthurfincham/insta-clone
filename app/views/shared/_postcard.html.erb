@@ -2,7 +2,8 @@
 <% @all_posts.each do |post| %>
   <div class="card post-card-container pt-2">
     <%= render 'shared/postcard/header', {:post => post }%>
-    <div class="post-image" style="background-image: url('<%= post.image_url%>')"></div>
+    <%# <div class="post-image" style="background-image: url('<%= post.image_url%>')"></div> %>
+    <%= post.photo %>
     <%= render 'shared/postcard/info', {:post => post }%>
     <%= render 'shared/postcard/comments', {:post => post }%>
     <p class=" mx-2 mb-1 mt-0 text-muted">
