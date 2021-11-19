@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  mount_uploader :photo, PhotoUploader
+  include ImageUploader::Attachment(:image)
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates_uniqueness_of :username

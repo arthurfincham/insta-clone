@@ -19,7 +19,9 @@
     </div>
 
     <div class="form-floating w-100">
-      <%= f.file_field :photo %>
+      <%= image_tag f.object.image_url if f.object.cached_image_data %>
+    <%= f.hidden_field :image, value: f.object.cached_image_data %>
+    <%= f.file_field :image , :class => 'form-control', :type => 'file' %>
     </div>
 
 
