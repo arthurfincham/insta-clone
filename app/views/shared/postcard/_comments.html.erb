@@ -3,7 +3,7 @@
   <div class="p-1 card-body">
     <small class="list-group p-1 post-comment-row">
       <a href="<%= user_path(current_user.id)%>" class="comments-profile-pic">
-        <%= id2ProfilePic(current_user.id) %>
+        <%= id2ProfilePic(current_user.id) if current_user.photo? %>
         <%= id2username(current_user.id) %>
       </a>
   
@@ -22,7 +22,7 @@
     <% post.comments.each do |comment| %>
       <div class="list-group p-1 post-comment-row">
         <% if comment.user_id %>
-          <a href="<%= user_path(comment.user_id)%>"><%= id2ProfilePic(comment.user_id) %></a>
+          <a href="<%= user_path(comment.user_id)%>"><%= id2ProfilePic(comment.user_id) if User.find(comment.user_id).photo? %></a>
           <small class="post-profile-pic mx-1"><%= id2username(comment.user_id) %></small>
           <small><%= comment.content %></small>
         <% end %>

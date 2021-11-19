@@ -1,6 +1,6 @@
 <div class="profile-container my-2">
   <div class="d-flex w-100 mx-3">
-    <div class="profile-image m-2"><%= id2ProfilePic(current_user.id) %>
+    <div class="profile-image m-2"><%= id2ProfilePic(current_user.id) if current_user.photo? %>
     </div>
     <div id="name-and-username">
     <h4 id="profile-name"><%= current_user.name %></h4>
